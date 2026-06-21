@@ -5,14 +5,14 @@ import App from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import CartProvider from "./context/CartContext";
-//import WishlistProvider from "./context/WishlistContext";
+import WishlistProvider from "./context/WishlistContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <CartProvider>
-      
+      <WishlistProvider>
         <App />
-    
+     </WishlistProvider>
     </CartProvider>
   </React.StrictMode>
 );
