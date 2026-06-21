@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
-function Navbar({ darkMode, setDarkMode }) {
+function Navbar() {
   const { cartItems } = useContext(CartContext);
 
   const userInfo = JSON.parse(localStorage.getItem("userInfo"));
@@ -127,19 +127,9 @@ function Navbar({ darkMode, setDarkMode }) {
             Bag ({cartItems.length})
           </Link>
 
-          {/* Dark Mode */}
+          
 
-          <button
-  className="btn rounded-pill"
-  style={{
-    background: darkMode ? "#ffffff" : "#111111",
-    color: darkMode ? "#111111" : "#ffffff",
-    border: "none"
-  }}
-  onClick={() => setDarkMode(!darkMode)}
->
-  {darkMode ? "☀" : "🌙"}
-</button>
+         
 
           {!userInfo ? (
             <Link to="/login">
