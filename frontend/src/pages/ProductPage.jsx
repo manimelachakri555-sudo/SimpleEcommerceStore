@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { CartContext } from "../context/CartContext";
-import { WishlistContext } from "../context/WishlistContext";
+import { WishlistContext } from "../context/wishListContext";
 function ProductPage() {
   const { id } = useParams();
 
