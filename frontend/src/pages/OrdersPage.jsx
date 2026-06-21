@@ -22,7 +22,7 @@ function OrdersPage() {
       };
 
       const { data } = await axios.get(
-        "http://localhost:5000/api/orders",
+        "https://simpleecommercestore-3.onrender.com/api/orders",
         config
       );
 
@@ -39,7 +39,7 @@ function OrdersPage() {
       );
 
       await axios.put(
-        `http://localhost:5000/api/orders/${id}/cancel`,
+       `https://simpleecommercestore-3.onrender.com/api/orders/${id}/cancel`,
         {},
         {
           headers: {
@@ -61,7 +61,7 @@ function OrdersPage() {
       );
 
       await axios.put(
-        `http://localhost:5000/api/orders/${id}/return`,
+        `https://simpleecommercestore-3.onrender.com/api/orders/${id}/return`,
         {},
         {
           headers: {

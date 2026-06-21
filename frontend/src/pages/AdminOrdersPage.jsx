@@ -16,7 +16,7 @@ function AdminOrdersPage() {
       };
 
       const { data } = await axios.get(
-        "http://localhost:5000/api/orders",
+        "https://simpleecommercestore-3.onrender.com/api/orders",
         config
       );
 
@@ -41,10 +41,10 @@ function AdminOrdersPage() {
       };
 
       await axios.put(
-        `http://localhost:5000/api/orders/${id}`,
-        { status },
-        config
-      );
+`https://simpleecommercestore-3.onrender.com/api/orders/${id}`,
+{ status },
+config
+);
 
       fetchOrders();
     } catch (error) {

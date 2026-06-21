@@ -15,7 +15,7 @@ function LoginPage() {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/users/login",
+        "https://simpleecommercestore-3.onrender.com/api/users/login",
         {
           email,
           password,

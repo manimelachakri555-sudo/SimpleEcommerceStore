@@ -11,7 +11,7 @@ function HomePage() {
     const fetchProducts = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:5000/api/products"
+          "https://simpleecommercestore-3.onrender.com/api/products"
         );
 
         setProducts(data);

@@ -14,7 +14,7 @@ function RegisterPage() {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/users/register",
+        "https://simpleecommercestore-3.onrender.com/api/users/register",
         {
           name,
           email,
