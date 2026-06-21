@@ -11,7 +11,7 @@ const {
   returnOrder,
 } = require("../controllers/orderController");
 
-const { protect } = require("../middleware/authmiddleware");
+const { protect } = require("../Middleware/authMiddleware");
 
 // Place Order
 router.post("/", protect, placeOrder);
