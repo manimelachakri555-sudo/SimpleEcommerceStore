@@ -17,7 +17,7 @@ function EditProductPage() {
     const fetchProduct = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:5000/api/products/${id}`
+          `https://simpleecommercestore-3.onrender.com/api/products/${id}`
         );
 
         setTitle(data.title);
@@ -39,7 +39,7 @@ function EditProductPage() {
 
     try {
       await axios.put(
-        `http://localhost:5000/api/products/${id}`,
+        `https://simpleecommercestore-3.onrender.com/api/products/${id}`,
         {
           title,
           description,

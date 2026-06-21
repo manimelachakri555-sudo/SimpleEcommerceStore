@@ -12,12 +12,14 @@ function ProductPage() {
   const [comment, setComment] = useState("");
 
   const { addToCart } = useContext(CartContext);
-const { addToWishlist } = useContext(WishlistContext);
+const wishlistContext = useContext(WishlistContext);
+
+const addToWishlist = wishlistContext?.addToWishlist;
   useEffect(() => {
     const fetchProduct = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:5000/api/products/${id}`
+          `https://simpleecommercestore-3.onrender.com/api/products/${id}`
         );
 
         setProduct(data);
@@ -32,13 +34,13 @@ const { addToWishlist } = useContext(WishlistContext);
   const submitReviewHandler = async () => {
     try {
       await axios.post(
-        `http://localhost:5000/api/products/${id}/reviews`,
-        {
-          name,
-          rating,
-          comment,
-        }
-      );
+  `https://simpleecommercestore-3.onrender.com/api/products/${id}/reviews`,
+  {
+    name,
+    rating,
+    comment,
+  }
+);
 
       alert("Review Added Successfully");
 
@@ -98,7 +100,7 @@ const { addToWishlist } = useContext(WishlistContext);
 
 <button
   className="btn btn-danger mt-3 ms-3"
-  onClick={() => addToWishlist(product)}
+  onClick={() => addToWishlist?.(product)}
 >
   ❤️ Wishlist
 </button>

@@ -36,7 +36,7 @@ if (!userInfo) {
       };
 
       const { data } = await axios.post(
-        "http://localhost:5000/api/orders",
+"https://simpleecommercestore-3.onrender.com/api/orders",
         {
           products: orderItems,
           totalPrice,

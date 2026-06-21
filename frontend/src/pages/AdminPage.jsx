@@ -22,7 +22,7 @@ function AdminPage() {
         };
 
         const { data } = await axios.get(
-          "http://localhost:5000/api/dashboard",
+          "https://simpleecommercestore-3.onrender.com/api/dashboard",
           config
         );
 

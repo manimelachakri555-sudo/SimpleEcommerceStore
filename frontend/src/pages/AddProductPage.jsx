@@ -35,8 +35,8 @@ function AddProductPage() {
 
       // Save product to database
       await axios.post(
-        "http://localhost:5000/api/products",
-        {
+"https://simpleecommercestore-3.onrender.com/api/products",
+{
           title,
           description,
           price,
